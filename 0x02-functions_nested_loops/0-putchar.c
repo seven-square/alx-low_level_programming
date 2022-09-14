@@ -1,3 +1,5 @@
+#include <string.h>
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -7,10 +9,20 @@
  */
 int main(void)
 {
-	char ch;
-
-	ch = "_putchar";
-	_putchar(ch);
-	_putchar('\n');
+	printPutchar();
 	return (0);
+}
+
+/**
+ * printPutchar - prints out the string character
+ *
+ * Description: uses the write function
+ * prints out string with a new line
+ * Return: _putchar
+ */
+int printPutchar(void)
+{
+	char putchar[] = "_putchar\n";
+
+	return (write(1, putchar, strlen(putchar)));
 }
