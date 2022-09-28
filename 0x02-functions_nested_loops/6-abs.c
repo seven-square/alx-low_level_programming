@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -11,10 +12,10 @@ int _abs(int i)
 	if (i < 0)
 	{
 		i *= -1;
-		_putchar(i + '0');
+		printf("%d\n", i);
 	}
 	else
 	{
-		_putchar(i + '0');
+		printf("%d\n", i);
 	}
 }
